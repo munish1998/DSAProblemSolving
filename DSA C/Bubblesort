@@ -1,0 +1,36 @@
+# include<stdio.h>
+# include<conio.h>
+void bubblesort(int a[],int);
+void main()
+{
+	int a[20];
+	int i,n;
+	printf("enter the size of array\n");
+	scanf("%d",&n);
+	printf("enter array elements\n");
+	for(i=0;i<n;i++)
+	{
+	scanf("%d",&a[i]);
+	}
+	printf("\narray before sorting:\n");
+	for(i=0;i<n;i++)
+	{
+		printf("%d\t",a[i]);
+	}
+}
+       void bubblesort(int a[],int n)
+	{
+	int pass,j;
+	for(pass=0;pass<n;pass++)
+	{
+	for(j=1;j<n-pass;j++)
+	{
+		if(a[j]<a[j-1])
+		{
+			int temp=a[j];
+			a[j]=a[j-1];
+			a[j-1]=temp;
+		}
+	}
+	}
+}
